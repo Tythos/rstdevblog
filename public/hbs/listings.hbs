@@ -1,0 +1,39 @@
+<div>
+    <style>
+        .listingItem {
+            list-style: none;
+            padding-bottom: 16px;
+        }
+
+        .listingTitle {
+            font-size: 16pt;
+            font-weight: bold;
+        }
+
+        .listingKeywords {
+            font-size: 10pt;
+            padding-left: 10px;
+        }
+
+        .listingKeyword {
+            font-style: italic;
+            padding: 0 4px;
+        }
+    </style>
+    <ul>
+        {{#each listings}}
+            <li class="listingItem">
+                <div class="listingHeader">
+                    <span class="listingTitle">
+                        <a href="/?name={{name}}">{{title}}</a>
+                    </span>
+                    <span class="listingSpacer"> : </span>
+                    <span class="listingDate">Published {{formatDate date}}</span>
+                </div>
+                <div class="listingKeywords">
+                    Keywords: {{#each keywords}}<span class="listingKeyword">{{this}}</span>{{/each}}
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

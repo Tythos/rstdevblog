@@ -1,0 +1,20 @@
+<div>
+    <style>
+        .keywordBlock {
+            border: 1px solid #000;
+            padding: 2px 4px;
+        }
+
+        .keywordBlock:hover {
+            color: #fff;
+            background-color: #000;
+            border: 1px solid #000;
+        }
+    </style>
+    <ul>
+        <h2>Top Keywords:</h2>
+        {{#each keywords}}
+            <span class="keywordBlock"><a href="#">{{this}}</a></span>
+        {{/each}}
+    </ul>
+</div>
