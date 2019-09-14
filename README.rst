@@ -4,6 +4,8 @@ Dreamer
 DreamHost-friendly server files for static hosting, scripted mounting, and
 transparent local testing, based on CherryPy/WSGI.
 
+.. contents::
+
 Assumptions
 -----------
 
@@ -70,3 +72,13 @@ Have questions about why something was designed the way it was? Fortunately,
 this project includes the first three articles published using this blog system
 in the "articles/" folder. Read parts 1, 2, and 3 to follow the design and
 development process!
+
+BUGS!?
+------
+
+I've noticed a few issues with the "rst2html" module from NPM. Specifically,
+there are some spacing shortcuts made from line endings that leave wierd
+artifacts in the middle of paragraphs, and some articles appear to only be
+processed partway. There are also some RST elements that aren't transformed
+(<pre/> for source code, etc.). I'm looking at adding some of these Features
+to the NPM module, but it will require some reverse engineering first.
