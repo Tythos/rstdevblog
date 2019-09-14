@@ -62,3 +62,11 @@ Tips
   minimize overhead on the WSGI interface (especially as your application
   scales); identify client-server data interfaces explicitly by exposing
   non-static methods in the *Server* object.
+
+WTF?
+----
+
+Have questions about why something was designed the way it was? Fortunately,
+this project includes the first three articles published using this blog system
+in the "articles/" folder. Read parts 1, 2, and 3 to follow the design and
+development process!
