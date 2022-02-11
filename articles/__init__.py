@@ -2,6 +2,7 @@
 """
 
 import os
+import re
 import datetime
 from docutils import utils, frontend, parsers, io, writers
 
@@ -35,8 +36,9 @@ def getSectionKeywords(section):
     """
     keywords = []
     for word in section.children[0].children[0].strip().lower().split():
-        if word  not in STOPWORDS:
-            keywords.append(word)
+        filtered = re.sub(r"^[a-zA-Z]", "", word)
+        if filtered not in STOPWORDS:
+            keywords.append(filtered)
     return keywords
 
 def getDocKeywords(doc, nWords=5):

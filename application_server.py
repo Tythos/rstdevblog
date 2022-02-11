@@ -13,10 +13,10 @@ import random
 import hashlib
 import docutils
 import cherrypy
-import git
+#import git
 import articles
 
-SALT = "this is some very tasty salt"
+SALT = "and pepper like the fresh smoked stuff from goa"
 
 class Server(object):
     """CherryMy points can be identified in this object for non-static routing.
@@ -69,8 +69,8 @@ class Server(object):
         rstPath = "%s/%s.rst" % (articles.MOD_ROOT, name)
         with open(rstPath, 'w') as f:
             f.write(body.decode("utf8"))
-        repo = git.Repository(articles.MOD_ROOT)
-        repo.addCommit("New article: '%s'" % name)
+        #repo = git.Repository(articles.MOD_ROOT)
+        #repo.addCommit("New article: '%s'" % name)
 
 # define module-level *application* symbol for Passenger WSGI mounting
 application = cherrypy.Application(Server(), "/", {
